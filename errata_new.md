@@ -56,7 +56,7 @@ Call an $r$-coloring $c:[X]^p \to \{0,\dots, r-1\}$  *good* if for any $x,y \in 
 We use the following notation for a number $N$ as in (2):
 
 $$
-N \; \overset{\text{good}}{\longrightarrow} (k)^p_r.
+N \overset{\text{good}}{\longrightarrow} (k)^p_r.
 $$
 
 The direction (1) $\Rightarrow$ (2) is clear, since every monochromatic coloring is a good coloring. 
