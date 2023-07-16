@@ -64,21 +64,20 @@ The direction (1) $\Rightarrow$ (2) is clear, since every monochromatic coloring
 To prove (2) $\Rightarrow$ (1), given $k \geq 1$, choose $N$ large enough so that 
 
 $$
-N \; \overset{\text{good}}{\longrightarrow} (r(k-1)+1)^p_r.
+N \overset{\text{good}}{\longrightarrow} (r(k-1)+1)^p_r.
 $$
 
 This is possible since we assume that (2) holds for *all* $k$.
 We claim that for this $N$, 
 
 $$
-N \; \longrightarrow (k)^p_r.
+N \longrightarrow (k)^p_r.
 $$
 
 So, let $c$ be an $r$-coloring of $[N]^p$. By choice of $N$, there exists a set $Y \subseteq [N]$ of size $r(k-1)+1$ such that $c$ is good on $[Y]^p$. Now define a new coloring $c^*: Y \to \{0,\dots, r-1\}$ be letting
 
-$$
-c^*(y) = \text{the color of any $p$-set in $[Y]^p$ in which $y$ is the least element}
-$$
+$$c^*(y) = \text{the color of any $p$-set in $[Y]^p$ in which $y$ is the least element}$$
+
 for any $y \leq r(k-1)-p+2$ (and $c^*(y) = 0$ otherwise, when $y$ cannot be the least element in a $p$-set). 
 This coloring is well-defined due to the goodness of $c$ on $[Y]^p$.
 
@@ -86,14 +85,14 @@ By the pigeonhole principle, since $Y$ is of size $r(k-1)+1$, there must exist a
 
 *Claim 2*: For every $k,p,r \geq 1$, there exists an $N$ such that 
 $$
-N \; \overset{\text{good}}{\longrightarrow} (k)^p_r.
+N \overset{\text{good}}{\longrightarrow} (k)^p_r.
 $$
 
 Claim 2 is proved by *double induction* on $k$ and $p$ ($r$ remains arbitrary but fixed throughout). We already know the claim holds for $k = p = 1$. 
 
 Let us assume Claim 2 holds for $p-1$ and for *all* $j$. Moreover, we assume that Claim 2 holds for $p$ and for all $j \leq k$. So let us choose $N$ such that
 $$
-    N \; \overset{\text{good}}{\longrightarrow} (k)^p_r.
+    N  \overset{\text{good}}{\longrightarrow} (k)^p_r.
 $$
 
 Because we already verified Claim 1 we can use the fact that $R(p-1,j,r)$ exists for *all* $j$.
@@ -164,9 +163,11 @@ By definition of $t^k$, $d(t, s_{n_k}) \leq 2^{-k}$, and thus $(s_{n_k})$ conver
 the $\prec$-least element $\ldots$'' should read:* 
 
 "Pick the $\prec$-least element $x_{\alpha_1}$ of $Z_1$ (which must
-exist since $\prec$ is a well-ordering) and observe that $\{y
-\in Z_1: c(x_\{\alpha_1\},y) = \text{red} \}$ is again
-uncountable." 
+exist since $\prec$ is a well-ordering) and observe that 
+
+$$\\{y\in Z_1: c(x_\{\alpha_1\},y) = \text{red}\\}$$ 
+
+is again uncountable." 
 
 *Thanks to **Shamil Asgarli** for catching
 this.*
@@ -177,7 +178,7 @@ this.*
 _The last line of the formula is incorrect -- we need to check __each__ entry in the argument of the function whether it is an element of the set coded by $z$. The line should read as follows:_
 
 $$
-    \forall m \leq l \: ( \, \forall s \leq p \exists i \leq k (\operatorname{decode}(\operatorname{arg}(f,m),s)=\operatorname{decode}(z,i)) \; \Rightarrow \; \operatorname{val}(f,m)=j \,)
+    \forall m \leq l (  \forall s \leq p \exists i \leq k (\operatorname{decode}(\operatorname{arg}(f,m),s)=\operatorname{decode}(z,i))  \Rightarrow  \operatorname{val}(f,m)=j )
 $$ 
 
 [Thanks to __Vineet Gupta__ and __Adnan Aziz__ for pointing this out.]
@@ -203,7 +204,7 @@ _The definition should read:_
 
 Let $X \subseteq \mathbb{N}$, $n \geq 1$, and suppose $f: [X]^n \to \mathbb{N}$. A set $M \subseteq X$ with $\mid M\mid  > n$ is **min-homogeneous** if for every $s, t \in [M]^n$, 
 $$    
-    \min s = \min t \; \Rightarrow \; f(s) = f(t).
+    \min s = \min t  \Rightarrow  f(s) = f(t).
 $$
 
 [Thanks to __Vineet Gupta__ and __Adnan Aziz__]
