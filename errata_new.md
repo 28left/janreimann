@@ -192,7 +192,7 @@ $$
 $$
 to the $\Delta_0$ formula using "meta"-quantifiers needs further justification. In particular, it does _not_ follow inductively by simply applying logical equivalences. Instead, the property of indiscernibles has to be invoked at this step already.
 
-[Click here](http://personal.psu.edu/jsr25/Ramsey_Book_4_5_patch.pdf) for an improved writeup of the argument (covering the remainder of the proof of Proposition 4.46)
+[Click here](https://28left.github.io/janreimann/Ramsey_Book_4_5_patch.pdf) for an improved writeup of the argument (covering the remainder of the proof of Proposition 4.46)
 
 Thanks to **Michael Weiss** for bringing up this important issue. Michael has a blog [diagonalargument.com](https://diagonalargument.com) I recommend. Among other entries, there is a series of "conversations" with John Baez about non-standard models of PA. [Here](https://diagonalargument.com/2019/05/06/non-standard-models-of-arithmetic-1/) is the first entry. Check it out! 
 
