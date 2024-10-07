@@ -1,4 +1,7 @@
 ---
+layout: page
+title: Errata to "An Introduction to Ramsey Theory"
+permalink: /publications.html
 jupytext:
   formats: ipynb,md:myst
   text_representation:
@@ -12,7 +15,7 @@ kernelspec:
   name: python3
 ---
 
-# Errata to "An Introduction to Ramsey Theory"
+<!-- # Errata to "An Introduction to Ramsey Theory" -->
 
 
 *If you think you found an error that is not listed below, please contact me (<a href="mailto:jan.reimann@psu.edu">jan.reimann@psu.edu</a>).*
