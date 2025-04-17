@@ -1,4 +1,6 @@
-# Lean Proof Assistant Workgroup 
+---
+title: Lean Proof Assistant Resources 
+---
 
 ## First Steps
 
