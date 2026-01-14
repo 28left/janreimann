@@ -14,8 +14,9 @@ Email: jan.reimann@psu.edu <br>
 ### Quick Links
 
 Book: [**An Introduction to Ramsey Theory (Fast Functions, Infinity,
-Metamathematics)**](https://bookstore.ams.org/stml-87), American
-Mathematical Society, 2018 &emsp; [Errata](errata_new.html)\
+Metamathematics)**](https://bookstore.ams.org/stml-87), <br>
+American Mathematical Society, 2018 <br>
+&emsp; [Errata](errata_new.html)\
 
 <!-- 
 [Lectures (Slides)](lectures.html)
