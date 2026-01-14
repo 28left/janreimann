@@ -1,0 +1,38 @@
+---
+title: "Jan Reimann"
+---
+
+Associate Professor <br>
+Department of Mathematics <br>
+Penn State University <br>
+233 McAllister <br>
+University Park, PA 16802 <br>
+<br>
+Email: jan.reimann@psu.edu <br>
+
+
+### Quick Links
+
+Book: [**An Introduction to Ramsey Theory (Fast Functions, Infinity,
+Metamathematics)**](https://bookstore.ams.org/stml-87), American
+Mathematical Society, 2018 &emsp; [Errata](errata_new.html)\
+
+<!-- 
+[Lectures (Slides)](lectures.html)
+
+[Publications](publications.html)
+
+[Teaching](teaching.html) -->
+
+[Curriculum Vitae](cv_current.html)
+
+
+
+### Research Interests
+
+- Algorithmic Information Theory and Randomness, Kolmogorov Complexity
+- Mathematical Logic, in particular Computability Theory
+- Descriptive Set Theory
+- Measure Theory, Hausdorff Dimension and Fractal Geometry
+- Diophantine Approximation
+- Computational Complexity
