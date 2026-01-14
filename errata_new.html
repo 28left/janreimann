@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Jan Reimann – Jan Reimann’s Web Site</title>
+<title>Errata to “An Introduction to Ramsey Theory” – Jan Reimann's Web Site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,6 +68,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -90,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -113,8 +142,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quick-links" id="toc-quick-links" class="nav-link active" data-scroll-target="#quick-links">Quick Links</a></li>
-  <li><a href="#research-interests" id="toc-research-interests" class="nav-link" data-scroll-target="#research-interests">Research Interests</a></li>
+  <li><a href="#page-24-proof-of-theorem-1.24" id="toc-page-24-proof-of-theorem-1.24" class="nav-link active" data-scroll-target="#page-24-proof-of-theorem-1.24">Page 24, Proof of Theorem 1.24</a></li>
+  <li><a href="#pages-31-34-proof-of-turáns-theorem" id="toc-pages-31-34-proof-of-turáns-theorem" class="nav-link" data-scroll-target="#pages-31-34-proof-of-turáns-theorem">Pages 31-34, Proof of Turán’s Theorem</a></li>
+  <li><a href="#page-44-a-different-proof-of-ramseys-theorem" id="toc-page-44-a-different-proof-of-ramseys-theorem" class="nav-link" data-scroll-target="#page-44-a-different-proof-of-ramseys-theorem">Page 44, A different proof of Ramsey’s Theorem</a></li>
+  <li><a href="#page-54-proof-of-theorem-2.12" id="toc-page-54-proof-of-theorem-2.12" class="nav-link" data-scroll-target="#page-54-proof-of-theorem-2.12">Page 54, proof of Theorem 2.12</a></li>
+  <li><a href="#page-75-line-20" id="toc-page-75-line-20" class="nav-link" data-scroll-target="#page-75-line-20">Page 75, line 20</a></li>
+  <li><a href="#page-158-big-formula-formal-statement-of-ramseys-theorem" id="toc-page-158-big-formula-formal-statement-of-ramseys-theorem" class="nav-link" data-scroll-target="#page-158-big-formula-formal-statement-of-ramseys-theorem">Page 158, big formula (formal statement of Ramsey’s theorem)</a></li>
+  <li><a href="#page-180-proof-of-proposition-4.46" id="toc-page-180-proof-of-proposition-4.46" class="nav-link" data-scroll-target="#page-180-proof-of-proposition-4.46">Page 180, proof of Proposition 4.46:</a></li>
+  <li><a href="#page-182-definition-4.48" id="toc-page-182-definition-4.48" class="nav-link" data-scroll-target="#page-182-definition-4.48">Page 182, Definition 4.48</a></li>
+  <li><a href="#page-186187-proof-of-lemma-4.52" id="toc-page-186187-proof-of-lemma-4.52" class="nav-link" data-scroll-target="#page-186187-proof-of-lemma-4.52">Page 186/187, proof of Lemma 4.52</a></li>
   </ul>
 </nav>
     </div>
@@ -123,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Jan Reimann</h1>
+<h1 class="title">Errata to “An Introduction to Ramsey Theory”</h1>
 </div>
 
 
@@ -140,29 +176,126 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Associate Professor <br> Department of Mathematics <br> Penn State University <br> 233 McAllister <br> University Park, PA 16802 <br> <br> Email: jan.reimann@psu.edu <br></p>
-<section id="quick-links" class="level3">
-<h3 class="anchored" data-anchor-id="quick-links">Quick Links</h3>
-<p>Book: <a href="https://bookstore.ams.org/stml-87"><strong>An Introduction to Ramsey Theory (Fast Functions, Infinity, Metamathematics)</strong></a>, American Mathematical Society, 2018   <a href="errata_new.html">Errata</a><br>
-</p>
-<!-- 
-[Lectures (Slides)](lectures.html)
-
-[Publications](publications.html)
-
-[Teaching](teaching.html) -->
-<p><a href="cv_current.html">Curriculum Vitae</a></p>
+<!-- # Errata to "An Introduction to Ramsey Theory" -->
+<p><em>If you think you found an error that is not listed below, please contact me (<a href="mailto:jan.reimann@psu.edu">jan.reimann@psu.edu</a>).</em></p>
+<section id="page-24-proof-of-theorem-1.24" class="level2">
+<h2 class="anchored" data-anchor-id="page-24-proof-of-theorem-1.24">Page 24, Proof of Theorem 1.24</h2>
+<p>Not strictly an error, but to conclude that <span class="math inline">\(\binom{2k-2}{k-1}\)</span> is a better bound than <span class="math inline">\(2^{2k}\)</span>, one can simply observe that <span class="math inline">\(\binom{2k-2}{k-1}\)</span> is a coefficient in the binomial expansion of</p>
+<p><span class="math display">\[
+    (1+1)^{2k-2} = 2^{2k-2}
+\]</span></p>
+<p>and hence must be quite smaller than <span class="math inline">\(2^{2k}\)</span>. No need to use Stirling’s formula here.</p>
+<p>[<em>Thanks to <strong>Paul Epstein</strong> for this observation.</em>]</p>
 </section>
-<section id="research-interests" class="level3">
-<h3 class="anchored" data-anchor-id="research-interests">Research Interests</h3>
-<ul>
-<li>Algorithmic Information Theory and Randomness, Kolmogorov Complexity</li>
-<li>Mathematical Logic, in particular Computability Theory</li>
-<li>Descriptive Set Theory</li>
-<li>Measure Theory, Hausdorff Dimension and Fractal Geometry</li>
-<li>Diophantine Approximation</li>
-<li>Computational Complexity</li>
-</ul>
+<section id="pages-31-34-proof-of-turáns-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="pages-31-34-proof-of-turáns-theorem">Pages 31-34, Proof of Turán’s Theorem</h2>
+<p>The proof given here only works in the case where <span class="math inline">\(k-1\)</span> divides <span class="math inline">\(N\)</span>, in which case we end up with a (perfectly balanced) <span class="math inline">\((k-1)\)</span>-partite graph. For the general case, the construction will yield a graph <span class="math inline">\(K_{n_1, \dots, n_{k-1}}\)</span> with <span class="math inline">\(n_{k-1}=\mid T\mid\)</span>. It remains to show that any such graph also obeys the Turán bound</p>
+<p><span class="math display">\[
+    \left ( 1- \dfrac{1}{k-1} \right) \frac{N}{2}.
+\]</span></p>
+<p>By the “swapping” argument on page 32, it is enough to verify this for Turán graphs (i.e.&nbsp;where <span class="math inline">\(\mid n_i - n_j\mid \leq 1\)</span>), and we leave this as an exercise.</p>
+<p>[<em>Thanks to <strong>Paul Epstein</strong> for pointing this out.</em>]</p>
+</section>
+<section id="page-44-a-different-proof-of-ramseys-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="page-44-a-different-proof-of-ramseys-theorem">Page 44, A different proof of Ramsey’s Theorem</h2>
+<p><em>The inductive argument as laid out in the text, is not quite clear. Below is a better version. Thanks to <strong>Paul Epstein</strong> and <strong>Isaac Goldbring</strong> for pointing this out (independently).</em></p>
+<p>Call an <span class="math inline">\(r\)</span>-coloring <span class="math inline">\(c:[X]^p \to \{0,\dots, r-1\}\)</span> <em>good</em> if for any <span class="math inline">\(x,y \in [X]^p\)</span>, if <span class="math inline">\(\min x = \min y\)</span>, then <span class="math inline">\(c(x) = c(y)\)</span>, that is, if two <span class="math inline">\(p\)</span>-sets have the same beginning, then they have the same color.</p>
+<p><em>Claim I:</em> Let <span class="math inline">\(p, r\)</span> be positive integers. The following statement are equivalent.</p>
+<ol type="1">
+<li>For all <span class="math inline">\(k \geq 1\)</span>, <span class="math inline">\(R(p,k,r)\)</span> exists.</li>
+<li>For all <span class="math inline">\(k\geq 1\)</span>, there exists an integer <span class="math inline">\(N\)</span> such that if <span class="math inline">\(\mid X\mid  \geq N\)</span> and <span class="math inline">\(c:[X]^p \to \{0,\dots, r-1\}\)</span> is an <span class="math inline">\(r\)</span>-coloring of the <span class="math inline">\(p\)</span>-element subsets of <span class="math inline">\(X\)</span>, then there exists a subset <span class="math inline">\(Y\)</span> of <span class="math inline">\(X\)</span> of size <span class="math inline">\(k\)</span> such that <span class="math inline">\(c\)</span> is good on <span class="math inline">\([Y]^p\)</span>.</li>
+</ol>
+<p>We use the following notation for a number <span class="math inline">\(N\)</span> as in (2):</p>
+<p><span class="math display">\[
+N \overset{\text{good}}{\longrightarrow} (k)^p_r.
+\]</span></p>
+<p>The direction (1) <span class="math inline">\(\Rightarrow\)</span> (2) is clear, since every monochromatic coloring is a good coloring.</p>
+<p>To prove (2) <span class="math inline">\(\Rightarrow\)</span> (1), given <span class="math inline">\(k \geq 1\)</span>, choose <span class="math inline">\(N\)</span> large enough so that</p>
+<p><span class="math display">\[
+N \overset{\text{good}}{\longrightarrow} (r(k-1)+1)^p_r.
+\]</span></p>
+<p>This is possible since we assume that (2) holds for <em>all</em> <span class="math inline">\(k\)</span>. We claim that for this <span class="math inline">\(N\)</span>,</p>
+<p><span class="math display">\[
+N \longrightarrow (k)^p_r.
+\]</span></p>
+<p>So, let <span class="math inline">\(c\)</span> be an <span class="math inline">\(r\)</span>-coloring of <span class="math inline">\([N]^p\)</span>. By choice of <span class="math inline">\(N\)</span>, there exists a set <span class="math inline">\(Y \subseteq [N]\)</span> of size <span class="math inline">\(r(k-1)+1\)</span> such that <span class="math inline">\(c\)</span> is good on <span class="math inline">\([Y]^p\)</span>. Now define a new coloring <span class="math inline">\(c^*: Y \to \{0,\dots, r-1\}\)</span> be letting</p>
+<p><span class="math display">\[c^*(y) = \text{the color of any $p$-set in $[Y]^p$ in which $y$ is the least element}\]</span></p>
+<p>for any <span class="math inline">\(y \leq r(k-1)-p+2\)</span> (and <span class="math inline">\(c^*(y) = 0\)</span> otherwise, when <span class="math inline">\(y\)</span> cannot be the least element in a <span class="math inline">\(p\)</span>-set). This coloring is well-defined due to the goodness of <span class="math inline">\(c\)</span> on <span class="math inline">\([Y]^p\)</span>.</p>
+<p>By the pigeonhole principle, since <span class="math inline">\(Y\)</span> is of size <span class="math inline">\(r(k-1)+1\)</span>, there must exist a subset <span class="math inline">\(Z \subseteq Y\)</span> of size <span class="math inline">\(k\)</span> on which <span class="math inline">\(c^*\)</span> is monochromatic. This in turn implies, using the fact that <span class="math inline">\(c\)</span> is good on <span class="math inline">\([Z]^p\)</span>, that <span class="math inline">\(c\)</span> is monochromatic on <span class="math inline">\([Z]^p\)</span>.</p>
+<p><em>Claim 2</em>: For every <span class="math inline">\(k,p,r \geq 1\)</span>, there exists an <span class="math inline">\(N\)</span> such that <span class="math display">\[
+N \overset{\text{good}}{\longrightarrow} (k)^p_r.
+\]</span></p>
+<p>Claim 2 is proved by <em>double induction</em> on <span class="math inline">\(k\)</span> and <span class="math inline">\(p\)</span> (<span class="math inline">\(r\)</span> remains arbitrary but fixed throughout). We already know the claim holds for <span class="math inline">\(k = p = 1\)</span>.</p>
+<p>Let us assume Claim 2 holds for <span class="math inline">\(p-1\)</span> and for <em>all</em> <span class="math inline">\(j\)</span>. Moreover, we assume that Claim 2 holds for <span class="math inline">\(p\)</span> and for all <span class="math inline">\(j \leq k\)</span>. So let us choose <span class="math inline">\(N\)</span> such that <span class="math display">\[
+    N  \overset{\text{good}}{\longrightarrow} (k)^p_r.
+\]</span></p>
+<p>Because we already verified Claim 1 we can use the fact that <span class="math inline">\(R(p-1,j,r)\)</span> exists for <em>all</em> <span class="math inline">\(j\)</span>. In particular, we can choose <span class="math inline">\(M\)</span> such that <span class="math display">\[
+    M \longrightarrow (N)^{p-1}_r.
+\]</span> We claim that <span class="math display">\[
+    M+1\overset{\text{good}}{\longrightarrow} (k+1)^p_r.
+\]</span></p>
+<p>Let <span class="math inline">\(c\)</span> be an <span class="math inline">\(r\)</span>-coloring of <span class="math inline">\([M+1]^p\)</span>. We define an <span class="math inline">\(r\)</span>-coloring <span class="math inline">\(c^{-}\)</span> on <span class="math inline">\([\{2,\dots, M+1\}]^{p-1}\)</span> by letting <span class="math display">\[
+    c^-(x_1, \dots, x_{p-1}) = c(1, x_1,\dots, x_{p-1}).
+\]</span> By choice of <span class="math inline">\(M\)</span>, there exists a subset <span class="math inline">\(Y \subseteq \{2, \dots, M+1\}\)</span> of size <span class="math inline">\(N\)</span> such that <span class="math inline">\(c^-\)</span> is monochromatic on <span class="math inline">\([Y]^{p-1}\)</span>, which in turn means that <span class="math inline">\(c\)</span> is good for any <span class="math inline">\(p\)</span>-set of <span class="math inline">\(\{1\} \cup Y\)</span> starting with <span class="math inline">\(1\)</span>.</p>
+<p>By choice of <span class="math inline">\(N\)</span>, there exists a subset <span class="math inline">\(Z \subseteq Y\)</span> of size <span class="math inline">\(k\)</span> such that <span class="math inline">\(c\)</span> is good on <span class="math inline">\([Z]^{p}\)</span>. It follows that <span class="math inline">\(c\)</span> is good on <span class="math inline">\([\{1\} \cup Z]^{p}\)</span>, as desired.</p>
+<p>Claim 1 and 2 together prove the general Ramsey theorem.</p>
+</section>
+<section id="page-54-proof-of-theorem-2.12" class="level2">
+<h2 class="anchored" data-anchor-id="page-54-proof-of-theorem-2.12">Page 54, proof of Theorem 2.12</h2>
+<p><em>The proof as written does not work, as it is not guaranteed that the <span class="math inline">\(n_i\)</span> will go to infinity. Thanks to <strong>Shamil Asgarli</strong> for pointing this out, and for suggesting the following proof.</em></p>
+<p>We simultaneously define, inductively, an infinite path <span class="math inline">\(t \in [T]\)</span> and a subsequence <span class="math inline">\(s_{n_k}\)</span> such that <span class="math inline">\(s_{n_k} \to t\)</span> for <span class="math inline">\(k \to \infty\)</span>.</p>
+<p>We put <span class="math inline">\(t^0 = r\)</span> and <span class="math inline">\(s_{n_0} = s_0\)</span>. Note that the set</p>
+<p><span class="math display">\[
+    S_0 = \{ m \colon s_m^0 = t^0 \}
+\]</span></p>
+<p>is infinite (every sequence passes through the root node).</p>
+<p>Now assume we have defined <span class="math inline">\(t^0 &lt; \ldots &lt; t^k\)</span>, where each <span class="math inline">\(t^i\)</span> is in <span class="math inline">\(T\)</span> and an immediate predecessor of <span class="math inline">\(t^{i+1}\)</span>, and $s_{n_0}, , s_{n_k} $ such that the set <span class="math display">\[    
+    S_k = \{ m \colon s_m^0 = t^0, \ldots, s_m^k = t^k \}
+\]</span> is infinite. Note that all sequences in <span class="math inline">\(S_k\)</span> have distance at most <span class="math inline">\(2^{-k}\)</span> from each other in the path metric, since they all have the same first <span class="math inline">\(k\)</span> elements. <span class="math inline">\(S_k\)</span> is infinite and <span class="math inline">\(T\)</span> is finitely branching, hence by the pigeonhole principle we can find an immediate successor <span class="math inline">\(t^{k+1} \in T\)</span> of <span class="math inline">\(t^k\)</span> such that <span class="math display">\[
+    S_{k+1} = \{ m \colon s_m^0 = t^0, \ldots, s_m^k = t^k, s_m^{k+1} = t^{k+1}  \}
+\]</span> is infinite. Let <span class="math inline">\(n_{k+1}\)</span> be the smallest number <span class="math inline">\(m \in S_{k+1}\)</span> that is greater than <span class="math inline">\(n_k\)</span>.</p>
+<p>Since all <span class="math inline">\(t^k\)</span> are on <span class="math inline">\(T\)</span>, they define an infinite path <span class="math display">\[
+    t = t^0 \, t^1\, t^2 \, \ldots  \in [T].
+\]</span></p>
+<p>By definition of <span class="math inline">\(t^k\)</span>, <span class="math inline">\(d(t, s_{n_k}) \leq 2^{-k}\)</span>, and thus <span class="math inline">\((s_{n_k})\)</span> converges to <span class="math inline">\(t\)</span> in the path metric.</p>
+</section>
+<section id="page-75-line-20" class="level2">
+<h2 class="anchored" data-anchor-id="page-75-line-20">Page 75, line 20</h2>
+<p><em>The sentence starting with “Pick the <span class="math inline">\(\prec\)</span>-least element <span class="math inline">\(\ldots\)</span>’’ should read:</em></p>
+<p>“Pick the <span class="math inline">\(\prec\)</span>-least element <span class="math inline">\(x_{\alpha_1}\)</span> of <span class="math inline">\(Z_1\)</span> (which must exist since <span class="math inline">\(\prec\)</span> is a well-ordering) and observe that</p>
+<p><span class="math display">\[\\{y\in Z_1: c(x_\{\alpha_1\},y) = \text{red}\\}\]</span></p>
+<p>is again uncountable.”</p>
+<p><em>Thanks to <strong>Shamil Asgarli</strong> for catching this.</em></p>
+</section>
+<section id="page-158-big-formula-formal-statement-of-ramseys-theorem" class="level2">
+<h2 class="anchored" data-anchor-id="page-158-big-formula-formal-statement-of-ramseys-theorem">Page 158, big formula (formal statement of Ramsey’s theorem)</h2>
+<p><em>The last line of the formula is incorrect – we need to check <strong>each</strong> entry in the argument of the function whether it is an element of the set coded by <span class="math inline">\(z\)</span>. The line should read as follows:</em></p>
+<p><span class="math display">\[
+    \forall m \leq l (  \forall s \leq p \exists i \leq k (\operatorname{decode}(\operatorname{arg}(f,m),s)=\operatorname{decode}(z,i))  \Rightarrow  \operatorname{val}(f,m)=j )
+\]</span></p>
+<p>[Thanks to <strong>Vineet Gupta</strong> and <strong>Adnan Aziz</strong> for pointing this out.]</p>
+</section>
+<section id="page-180-proof-of-proposition-4.46" class="level2">
+<h2 class="anchored" data-anchor-id="page-180-proof-of-proposition-4.46">Page 180, proof of Proposition 4.46:</h2>
+<p>The transition from the formula <span class="math display">\[
+  \mathcal{N} \models \exists x_1 \forall x_2 \ldots \exists x_n \: \psi(a, \vec{c}, \vec{x})
+\]</span> to the <span class="math inline">\(\Delta_0\)</span> formula using “meta”-quantifiers needs further justification. In particular, it does <em>not</em> follow inductively by simply applying logical equivalences. Instead, the property of indiscernibles has to be invoked at this step already.</p>
+<p><a href="https://28left.github.io/janreimann/Ramsey_Book_4_5_patch.pdf">Click here</a> for an improved writeup of the argument (covering the remainder of the proof of Proposition 4.46)</p>
+<p>Thanks to <strong>Michael Weiss</strong> for bringing up this important issue. Michael has a blog <a href="https://diagonalargument.com">diagonalargument.com</a> I recommend. Among other entries, there is a series of “conversations” with John Baez about non-standard models of PA. <a href="https://diagonalargument.com/2019/05/06/non-standard-models-of-arithmetic-1/">Here</a> is the first entry. Check it out!</p>
+<p>Finally, for the connoisseurs, Michael has provided a proof of the above transition that does not use indiscernibility: <a href="http://personal.psu.edu/jsr25/michael_weiss_patch.pdf">PDF file</a></p>
+</section>
+<section id="page-182-definition-4.48" class="level2">
+<h2 class="anchored" data-anchor-id="page-182-definition-4.48">Page 182, Definition 4.48</h2>
+<p><em>The definition should read:</em></p>
+<p>Let <span class="math inline">\(X \subseteq \mathbb{N}\)</span>, <span class="math inline">\(n \geq 1\)</span>, and suppose <span class="math inline">\(f: [X]^n \to \mathbb{N}\)</span>. A set <span class="math inline">\(M \subseteq X\)</span> with <span class="math inline">\(\mid M\mid  &gt; n\)</span> is <strong>min-homogeneous</strong> if for every <span class="math inline">\(s, t \in [M]^n\)</span>, <span class="math display">\[    
+    \min s = \min t  \Rightarrow  f(s) = f(t).
+\]</span></p>
+<p>[Thanks to <strong>Vineet Gupta</strong> and <strong>Adnan Aziz</strong>]</p>
+</section>
+<section id="page-186187-proof-of-lemma-4.52" class="level2">
+<h2 class="anchored" data-anchor-id="page-186187-proof-of-lemma-4.52">Page 186/187, proof of Lemma 4.52</h2>
+<p>At several places <span class="math inline">\([W]^{n+1}\)</span> should be <span class="math inline">\([Y]^{n+1}\)</span> instead: page 186, lines 3, 6, last line of the second last paragraph, and page 187, line 2.</p>
+<p>[Thanks to <strong>Vineet Gupta</strong> and <strong>Adnan Aziz</strong>]</p>
 
 
 </section>
